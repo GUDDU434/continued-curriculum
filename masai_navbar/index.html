@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai School</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script
+      src="https://kit.fontawesome.com/dc5cda6b7c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div id="humbergerIcon" onclick="openContent()">
+        <i class="fa-solid fa-bars" id="iconBars"></i>
+        <i class="fa-solid fa-xmark hidden" id="iconXmark"></i>
+      </div>
+      <div id="logo">
+        <img
+          src="https://students.masaischool.com/static/media/masai-logo.e5c8801d4f26d2da036ec9e4b93cb202.svg"
+          alt="masai logo"
+        />
+      </div>
+      <div id="rightDiv">
+        <div id="quick_links">
+          <div class="dropdown">
+            <button class="dropbtn" onclick="deopDown()">
+              Course <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+              <p>Full Time</p>
+              <div class="courses">
+                <p>
+                  Full Stack Web Development
+                  <i class="fa-solid fa-angle-right"></i>
+                </p>
+                <p class="duration">30 Weeks | 18 - 28 Yrs | Online</p>
+              </div>
+              <p>Part Time</p>
+              <div class="courses">
+                <p>
+                  Full Stack Web Development
+                  <i class="fa-solid fa-angle-right"></i>
+                </p>
+                <p class="duration">30 Weeks | 18 - 28 Yrs | Online</p>
+              </div>
+              <div class="courses">
+                <p>Data Analytics <i class="fa-solid fa-angle-right"></i></p>
+                <p class="duration">30 Weeks | 18 - 28 Yrs | Online</p>
+              </div>
+            </div>
+          </div>
+          <div><a href="#">FEES & ISA</a></div>
+          <div><a href="#">ABOUT US</a></div>
+          <div><a href="#">HIRE FROM US</a></div>
+          <div><a href="#">FAQ</a></div>
+          <div><a href="#">EVENTS</a></div>
+        </div>
+
+        <div class="refral">
+          <button id="refral">
+            REFER & EARN <i class="fa-solid fa-hand-holding-heart"></i>
+          </button>
+        </div>
+        <div class="login"><button id="login">LOGIN</button></div>
+      </div>
+    </div>
+    <div class="side_div">
+      <div>
+        <p>Full Time</p>
+        <div class="courses">
+          <p>
+            Full Stack Web Development <i class="fa-solid fa-angle-right"></i>
+          </p>
+          <p class="duration">30 Weeks | 18 - 28 Yrs | Online</p>
+        </div>
+        <p>Part Time</p>
+        <div class="courses">
+          <p>
+            Full Stack Web Development <i class="fa-solid fa-angle-right"></i>
+          </p>
+          <p class="duration">30 Weeks | 18 - 28 Yrs | Online</p>
+        </div>
+        <div class="courses">
+          <p>Data Analytics <i class="fa-solid fa-angle-right"></i></p>
+          <p class="duration">30 Weeks | 18 - 28 Yrs | Online</p>
+        </div>
+      </div>
+      <div class="link1"><a href="#">FEES & ISA</a></div>
+      <div class="link1"><a href="#">ABOUT US</a></div>
+      <div class="link1"><a href="#">HIRE FROM US</a></div>
+      <div class="link1"><a href="#">FAQ</a></div>
+      <div class="link1"><a href="#">EVENTS</a></div>
+    </div>
+  </body>
+</html>
+<script src="./index.js"></script>
