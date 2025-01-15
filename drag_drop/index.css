@@ -1,0 +1,34 @@
+#outer {
+  width: fit-content;
+  margin: auto;
+}
+
+.item {
+  width: 20rem;
+  height: 2.5rem;
+  margin: 1.25rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0px 10px;
+  cursor: move;
+  border: 3px solid white;
+}
+.item:hover {
+  border: 3px solid black;
+}
+.item span {
+  pointer-events: none;
+}
+.item:nth-child(odd).drag-enter {
+  transform: rotate(0deg);
+}
+.item:nth-child(even).drag-enter {
+  transform: rotate(-0deg);
+}
+.item:nth-child(odd).drag-start {
+  transform: rotate(0deg) scale(0.75);
+}
+.item:nth-child(even).drag-start {
+  transform: rotate(-0deg) scale(0.75);
+}
