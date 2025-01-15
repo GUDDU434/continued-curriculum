@@ -1,0 +1,100 @@
+#main {
+  display: flex;
+  /* border: solid rgb(210, 255, 255); */
+  width: 30%;
+  margin: 5% auto;
+  padding: 15px;
+  justify-content: space-between;
+}
+/* leftTooltip container */
+#common {
+  padding: 10px;
+  background-color: teal;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 75px;
+  text-align: center;
+  border-radius: 10px;
+}
+/* leftTooltip text */
+.commontext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+.leftTooltiptext {
+  top: 10%;
+  right: 115%;
+}
+
+.leftTooltip .leftTooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+#common:hover .commontext {
+  visibility: visible;
+}
+
+/* ***************************** */
+/* Right tool tiptip text */
+.rightTooltiptext {
+  top: 10%;
+  left: 110%;
+}
+.rightTooltip .rightTooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+/* top tool tiptip text */
+.topTooltiptext {
+  top: -40px;
+  right: -10%;
+}
+.topTooltip .topTooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+/* ********************** */
+
+/* Bottom tool tiptip text */
+.bottomTooltip .bottomTooltiptext {
+  top: 120%;
+  left: -10%;
+}
+.bottomTooltip .bottomTooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
