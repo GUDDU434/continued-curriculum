@@ -1,10 +1,10 @@
 //Numeric Types:
 const age: number = 25;
-const largeNumber: bigint = 9007199254740991n;
+// const largeNumber: bigint = 9007199254740991n;
 
 // String Type:
 
-let name: string = "John Doe";
+// let name: string = "John Doe";
 
 // Boolean Type:
 const isStudent: boolean = true;
