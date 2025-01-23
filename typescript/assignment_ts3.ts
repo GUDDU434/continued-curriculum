@@ -44,3 +44,8 @@ class Staff extends PersonClass {
     this.position = position;
   }
 }
+
+
+const student1 = new Student(1, "Computer Science", 2, "John Doe", 25, "Ht9o7@example.com");
+
+const staff1 = new Staff(1, "IT", "Manager", "Jane Smith", 30, "KX6b9@example.com");
