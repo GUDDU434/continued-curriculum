@@ -37,7 +37,7 @@ const Dashboard = () => {
     (state) => state.Task
   );
 
-  console.log(AllTasks);
+  // console.log(AllTasks);
 
   useEffect(() => {
     dispatch(GetAllTasks());

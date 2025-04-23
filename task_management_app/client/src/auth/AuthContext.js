@@ -2,14 +2,12 @@
 import PropTypes from "prop-types";
 import { createContext, useCallback, useMemo, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
-import { LOGIN_SUCCESS_METHOD } from "../Redux/auth/auth.actionTypes";
+import {
+  LOGIN_FAILURE_METHOD,
+  LOGIN_SUCCESS_METHOD,
+} from "../Redux/auth/auth.actionTypes";
 import { axiosInstance } from "../utils/axiosInstance";
 import useAxiosPrivate from "../utils/useAxiosPrivate";
-
-// ----------------------------------------------------------------------
-// NOTE:
-// We only build demo at basic level.
-// Customer will need to do some extra handling yourself if you want to extend the logic and other features...
 
 // ----------------------------------------------------------------------
 const initialState = {
@@ -105,9 +103,9 @@ export function AuthProvider({ children }) {
           username,
           password,
         });
-        const { accessToken, refreshToken, role } = response?.data;
+        const { accessToken, refreshToken } = response?.data;
 
-        // Save tokens and role in localStorage
+        // Save tokens in localStorage
         localStorage.setItem("accessToken", accessToken);
         localStorage.setItem("refreshToken", refreshToken);
 
@@ -131,7 +129,13 @@ export function AuthProvider({ children }) {
         });
         navigate("/");
       } catch (error) {
-        console.error("Login error: ", error);
+        // console.error("Login error: ", error);
+        dispatch({
+          type: LOGIN_FAILURE_METHOD,
+          payload: error?.response?.data?.message || "Something went wrong",
+        });
+
+        throw error;
       }
     },
     [navigate]

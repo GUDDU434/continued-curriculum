@@ -11,11 +11,8 @@ import { ToastContainer } from "react-toastify";
 const Routing = () => {
   const { isAuthenticated } = useContext(AuthContext);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const navigation = useNavigate();
-
-  // console.log(isAuthenticated, user);
-
   const [isAuth, setIsAuth] = useState(false);
+  const navigation = useNavigate();
 
   const handleSidebarToggle = () => {
     setSidebarOpen(!isSidebarOpen);

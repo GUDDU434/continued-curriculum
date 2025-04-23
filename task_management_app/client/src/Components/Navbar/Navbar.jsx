@@ -42,7 +42,7 @@ const Navbar = ({ onOpen }) => {
     setUserDetails(profile);
   }, [profile, user]);
 
-  console.log(profile, "profile");
+  // console.log(profile, "profile");
 
   const handleCloseUserModal = () => {
     setUserModal(false);
