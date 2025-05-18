@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bookRouter = require("./controllers/book.controller");
+const myBookRouter = require("./controllers/mybook.controllers");
 
 const {
   RegisterUser,
@@ -33,19 +34,19 @@ app.get("/api/auth/me", authenticate, GetUser);
 app.put("/api/auth/user", authenticate, UpdateUserDetails);
 
 // Tasks Routes
-app.get("/api/books", authenticate, bookRouter.GetAllTasks);
+app.get("/api/books", authenticate, bookRouter.GetAllBooks);
 
-app.post("/api/mybooks/:bookId", authenticate, bookRouter.CreateTask);
-app.get("/api/mybooks", authenticate, bookRouter.GetTaskById);
+app.post("/api/mybooks/:bookId", authenticate, myBookRouter.AddToMyBook);
+app.get("/api/mybooks", authenticate, myBookRouter.GetAllMyBooks);
 app.put(
   "/api/mybooks/:bookId/status",
   authenticate,
-  bookRouter.UpdateRetingOrStatus
+  myBookRouter.UpdateRetingOrStatus
 );
 app.put(
   "/api/mybooks/:bookId/rating",
   authenticate,
-  bookRouter.UpdateRetingOrStatus
+  myBookRouter.UpdateRetingOrStatus
 );
 
 
