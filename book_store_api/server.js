@@ -98,7 +98,7 @@ app.delete("/books/:id", (req, res) => {
   fs.writeFileSync("./db.json", JSON.stringify(book)); // update the books list
 
   //Send the success response
-  res.status(200).json({ message: "book deleted successfully" });
+  res.status(204).json({ message: "book deleted successfully" });
 });
 
 // Handle All Undefined Routes
