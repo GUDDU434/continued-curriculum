@@ -15,9 +15,9 @@ const TaskManager = () => {
   const [editTask, setEditTask] = useState({});
   const [openModal, setOpenModal] = useState(false);
 
-  const toggleModal = () => {
-    setOpenModal(!openModal);
-  };
+  // const toggleModal = () => {
+  //   setOpenModal(!openModal);
+  // };
 
   const handleChange = (e) => {
     setNewTask({
